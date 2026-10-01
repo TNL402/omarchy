@@ -41,8 +41,8 @@ In order to do that, run `limine-scan` and follow the prompts to add whichever i
 
 The current free-space installer will not proceed when it detects BitLocker on the selected disk. If you encounter this error, boot into Windows, go to **Settings -> Privacy & Security -> Device encryption**, and toggle BitLocker off. Wait for Windows to finish decrypting the volume before retrying the installation. Suspending BitLocker protection is not enough to satisfy this installer check.
 
+ ![dual-boot-7](images/dual-boot-7.webp)
+
 After Omarchy is installed, you can turn BitLocker back on for the Windows volume. Make sure you select only the Windows volume and leave the Omarchy partitions unchanged. When enabling it, save the recovery key somewhere accessible outside the encrypted Windows volume.
 
 If you want to start Windows with Limine, run `limine-scan` and successfully boot Windows from the new entry before turning BitLocker back on, because changing the Windows boot path afterward can alter TPM measurements and trigger recovery. Keep the recovery key available, and suspend BitLocker before changing Secure Boot or TPM settings, installing UEFI/BIOS or TPM firmware updates outside Windows, or changing the Windows boot path.
-
- ![dual-boot-7](images/dual-boot-7.webp)
